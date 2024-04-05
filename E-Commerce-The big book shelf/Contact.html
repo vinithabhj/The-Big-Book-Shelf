@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The big book shelf | Ecommerce Website Design</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,200&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+        body {
+          font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        * {
+          box-sizing: border-box;
+        }
+        
+        /* Style inputs */
+        input[type=text], select, textarea {
+          width: 100%;
+          padding: 12px;
+          border: 1px;
+          margin-top: 6px;
+          margin-bottom: 16px;
+          resize: vertical;
+        }
+        
+        #submitBtn {
+          background-color: #4CAF50;
+          color: white;
+          padding: 10px 20px;
+         border: none;
+           border-radius: 4px;
+           cursor: pointer;
+            font-size: 16px;
+        }
+        h1 {
+        font-size: 2em;
+        font-weight:normal;
+        }
+        
+        /* Style the container/contact section */
+        .container {
+          border-radius: 5px;
+          padding: 10px;
+        }
+        
+        /* Create two columns that float next to eachother */
+        .column {
+          float: left;
+          width: 50%;
+          margin-top: 6px;
+          padding: 20px;
+        }
+        
+        /* Clear floats after the columns */
+        .row:after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+        
+        /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 600px) {
+          .column, button [type=submit] {
+            width: 100%;
+            margin-top: 0;
+          }
+        }
+        </style>
+</head>
+ <body>
+    <div class="header">
+        <div class="container">
+        <div class="navbar">
+            <div class="logo">
+            <a href="index.html">
+                <img src="images/logo.png" alt="" width="250px"
+            /></a>
+            </div>
+        <h1><i><center>The Big Book Shelf</center></i></h1>
+
+            <nav>
+            <ul id="MenuItems">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Books.html">Books</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+                <li><a href="account.html">Account</a></li>
+                <!-- TODo: 22:20 -->
+            </ul>
+            </nav>
+            
+        </div>
+        </div>
+
+        <div class="Contact-page">
+            
+            <div class="container">
+              <div style="text-align:center">
+                <h2>Contact Us</h2>
+                <p>Swing by for a cup of coffee, or leave us a message:</p>
+              </div>
+              <div class="row">
+                <div class="column">
+                  <img src="images/image1.png" style="width:100%">
+                </div>
+                <div class="column">
+                  <form action="Contact.html">
+                    <label for="fname">First Name</label>
+                    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                    <label for="lname">Last Name</label>
+                    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                    <label for="email">Email Address</label>
+                    <input type="text" id="email" name="email address" placeholder="Your email address..">
+                    <label for="country">Country</label>
+                    <select id="country" name="country">
+                      <option value="india">India</option>
+                      <option value="australia">Australia</option>
+                      <option value="canada">Canada</option>
+                      <option value="usa">USA</option>
+                    </select>
+                    <label for="subject">Subject</label>
+                    <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+                    <form onsubmit="return redirect()">
+                    <button id="submitBtn">Submit</button>
+                  </form>
+		    <script>
+                    document.getElementById("submitBtn").addEventListener("click", function() {
+                            if (confirm("Are you sure you want to submit?")) {
+                              document.getElementById("myForm").submit();
+                     }
+                    });
+                    </script>
+                    <script>
+                      function redirect() {
+                        window.location.href = "file:///D:/web%201/E-Commerce-website-html-css-js-master/Contact.html"; // Replace with your page URL
+                        return false; // Prevent the form from submitting normally
+                      }
+                      </script>
+
+                </div>
+              </div>
+            </div>
+    </div>
+    
+
+
+    <div class="footer">
+        <div class="container">
+        <div class="row">
+            <div class="footer-col-1">
+            <h3>Download Our App</h3>
+            <p>
+                Download App for Android <br />
+                and ios mobile phone
+            </p>
+            <div class="app-logo">
+                <img src="images/play-store.png" alt="" />
+                <img src="images/app-store.png" alt="" />
+            </div>
+            </div>
+            <div class="footer-col-2">
+            <img src="images/logo.png" alt="" />
+            <p>
+                it isn't what the book costs.
+                It's what it will cost you if you don't read it !
+            </p>
+            </div>
+            <div class="footer-col-3">
+            <h3>Useful Links</h3>
+            <ul>
+                <li>Return Policy</li>
+                <li>Join Affiliate</li>
+            </ul>
+            </div>
+
+            <div class="footer-col-4">
+            <h3>Follow us</h3>
+            <ul>
+                <li>Facebook</li>
+                <li>Twitter</li>
+                <li>Instagram</li>
+                <li>YouTube</li>
+            </ul>
+            </div>
+        </div>
+        <hr />
+        <p class="copyright">Copyright 2020 - introidx</p>
+        </div>
+    
+ </body>
+ </html>
